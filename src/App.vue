@@ -1,7 +1,11 @@
 <script>
 import axios from 'axios';
 import { store } from './store';
+import ProjectCard from './components/ProjectCard.vue';
 export default {
+  components: {
+    ProjectCard
+  },
   data() {
     return {
       store
@@ -23,9 +27,11 @@ export default {
 <template>
   <div class="container">
     <h2 class="text-center">Vite Boolfolio</h2>
-    <ul v-for="project in store.projectsStore" :key="project.id">
-      <li>{{ project.title }}</li>
-    </ul>
+    <div class="row row-cols-3 g-2">
+      <div class="col" v-for="project in store.projectsStore" :key="project.id">
+        <ProjectCard :project="project" />
+      </div>
+    </div>
   </div>
 </template>
 
