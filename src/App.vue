@@ -1,19 +1,19 @@
 <script>
-import { store } from './store';
 import axios from 'axios';
+import { store } from './store';
 export default {
   data() {
     return {
       store
     }
   },
-  mounthed() {
-    this.callProjects();
+  mounted() {
+    this.getProjects();
   },
   methods: {
-    callProjects() {
-      axios.get(this.store.localUrl).then((resp) => {
-        this.store.projects = resp.data.results;
+    getProjects() {
+      axios.get(this.store.localUrl).then(resp => {
+        this.store.projectsStore = resp.data.results;
       })
     }
   }
@@ -23,6 +23,9 @@ export default {
 <template>
   <div class="container">
     <h2 class="text-center">Vite Boolfolio</h2>
+    <ul v-for="project in store.projectsStore" :key="project.id">
+      <li>{{ project.title }}</li>
+    </ul>
   </div>
 </template>
 
