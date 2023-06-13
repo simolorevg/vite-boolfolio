@@ -20,7 +20,11 @@ export default {
 }
 </script>
 
-<template></template>
+<template>
+  <div class="container">
+    <h2 class="text-center">Vite Boolfolio</h2>
+  </div>
+</template>
 
 <style lang="scss" scoped>
 @use "./style/general.scss" as *;
