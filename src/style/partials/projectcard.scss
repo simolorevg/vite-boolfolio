@@ -1,0 +1,14 @@
+.my-card {
+    border: 1px solid black;
+
+    .my-card-image {
+        background-color: black;
+        color: white;
+        height: 40%;
+        text-align: center;
+    }
+
+    .my-card-body {
+        flex-grow: 1;
+    }
+}
