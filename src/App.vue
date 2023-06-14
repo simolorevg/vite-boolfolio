@@ -13,11 +13,12 @@ export default {
   },
   mounted() {
     this.getProjects();
+    console.log(this.store.projectStore);
   },
   methods: {
     getProjects() {
       axios.get(this.store.localUrl).then(resp => {
-        this.store.projectsStore = resp.data.results;
+        this.store.projectStore = resp.data.results;
       })
     }
   }
@@ -28,7 +29,7 @@ export default {
   <div class="container">
     <h2 class="text-center">Vite Boolfolio</h2>
     <div class="row row-cols-3 g-2">
-      <div class="col" v-for="project in store.projectsStore" :key="project.id">
+      <div class="col" v-for="project in store.projectStore" :key="project.id">
         <ProjectCard :project="project" />
       </div>
     </div>
