@@ -26,7 +26,6 @@ export default {
 }
 </script>
 <template>
-    <h1>Questa è la home page</h1>
     <div class="container">
         <h2 class="text-center">Vite Boolfolio</h2>
         <div class="row row-cols-3 g-2">
@@ -36,4 +35,4 @@ export default {
         </div>
     </div>
 </template>
-<style></style>
+<style lang="scss"></style>
