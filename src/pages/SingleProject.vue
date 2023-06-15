@@ -7,21 +7,22 @@ export default {
     data() {
         return {
             store,
-            project: null,
+            project: '',
             errorMsg: ""
         }
     },
     mounted() {
         const idParam = this.$route.params.id;
         console.log('id numero ', idParam);
-        axios.get(`http://127.0.0.1:8000/api/projects/${idParam}`).then((resp) => {
-            if (resp.data.success) {
-                this.project = resp.data.results;
-                console.log(this.project);
-            }
+        axios.get(`${this.store.localUrl}/${idParam}`).then((resp) => {
+            this.project = resp.data.results;
+            console.log('Project ', this.project);
+            console.log('result ', resp.data.results);
         });
     }
 }
 </script>
-<template></template>
+<template>
+    <h2 class="text-center">{{ project.title }}</h2>
+</template>
 <style lang="scss"></style>
