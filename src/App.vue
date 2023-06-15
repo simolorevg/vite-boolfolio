@@ -1,10 +1,14 @@
 <script>
-import ProjectCard from './components/ProjectCard.vue';
+import AppNavbar from './components/AppNavbar.vue';
 export default {
+  components: {
+    AppNavbar
+  }
 }
 </script>
 
 <template>
+  <AppNavbar />
   <router-view></router-view>
 </template>
 
