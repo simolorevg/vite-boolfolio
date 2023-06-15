@@ -7,7 +7,7 @@ export default {
     data() {
         return {
             store,
-            project: '',
+            project: {},
             errorMsg: ""
         }
     },
@@ -23,6 +23,6 @@ export default {
 }
 </script>
 <template>
-    <h2 class="text-center">{{ project.title }}</h2>
+    <h2 class="text-center">{{ project.id }}</h2>
 </template>
 <style lang="scss"></style>
