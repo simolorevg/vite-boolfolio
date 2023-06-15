@@ -19,16 +19,15 @@ export default {
             <h5>{{ project.title }} <span>
                     <p> di {{ project.author }}</p>
                 </span></h5>
-            <p>{{ project.post }}</p>
-            <div v-if="project.technologies !== undefined">
+            <div>
                 <h5>Tecnologie</h5>
                 <p>
                     <span v-for="tech in project.technologies" :key="project.technologies.id">{{ tech.name }}, </span>
                 </p>
             </div>
-            <div v-else>
-                <h6>Nessuna tecnologia</h6>
-            </div>
+            <router-link :to="{ name: 'single-project', params: { id: project.id } }" class="btn btn-primary">
+                Leggi Di più
+            </router-link>
         </div>
     </div>
 </template>

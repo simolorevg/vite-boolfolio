@@ -2,10 +2,12 @@
 import axios from 'axios';
 import { store } from '../store';
 import ProjectCard from '../components/ProjectCard.vue';
+import SingleProject from './SingleProject.vue';
 export default {
     name: 'AppHome',
     components: {
-        ProjectCard
+        ProjectCard,
+        SingleProject
     },
     data() {
         return {
