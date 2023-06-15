@@ -26,6 +26,7 @@ export default {
 </script>
 
 <template>
+  <router-view></router-view>
   <div class="container">
     <h2 class="text-center">Vite Boolfolio</h2>
     <div class="row row-cols-3 g-2">

@@ -9,7 +9,7 @@ export default {
 }
 </script>
 <template>
-    <div class="my-card h-100 d-flex flex-column">
+    <div class="my-card d-flex flex-column">
         <div class="my-card-image">
             <div class="img-unavaiable">
                 SORRY THE IMG IS NOT AVAIABLE :-(
@@ -32,4 +32,6 @@ export default {
         </div>
     </div>
 </template>
-<style lang="scss" scoped>@use '../style/general.scss' as *;</style>
+<style lang="scss" scoped>
+@use '../style/general.scss' as *;
+</style>
