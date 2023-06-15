@@ -11,6 +11,10 @@ export default {
                 {
                     title: 'About',
                     route: 'about'
+                },
+                {
+                    title: 'Progetti',
+                    route: 'projects'
                 }
             ]
         }
