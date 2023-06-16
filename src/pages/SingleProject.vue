@@ -21,7 +21,7 @@ export default {
 </script>
 <template>
     <h2 class="text-center">{{ project.title }}</h2>
-    <h4>di {{ project.author }}</h4>
+    <h3>di {{ project.author }}</h3>
     <p>{{ project.post }}</p>
 </template>
 <style lang="scss"></style>
