@@ -9,11 +9,11 @@ export default {
                     route: 'home'
                 },
                 {
-                    title: 'About',
-                    route: 'about'
+                    title: 'Dedication',
+                    route: 'dedication'
                 },
                 {
-                    title: 'Progetti',
+                    title: 'Projects',
                     route: 'projects'
                 }
             ]

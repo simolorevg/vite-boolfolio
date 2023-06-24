@@ -29,7 +29,7 @@ export default {
 <template>
     <h2 class="text-center">Vite Boolfolio</h2>
     <div class="container d-flex flex-column justify-content-center align-items-center">
-        <div class="row row-cols-3 g-2 my-2">
+        <div class="row row-cols-2 g-2 my-2">
             <div class="col" v-for="project in store.projectStore" :key="project.id">
                 <ProjectCard :project="project" />
             </div>

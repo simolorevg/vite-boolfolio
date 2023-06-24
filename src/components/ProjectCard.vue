@@ -7,30 +7,55 @@ export default {
 }
 </script>
 <template>
-    <article class="article-wrapper">
-        <div class="rounded-lg container-project">
+    <div class="my-card">
+        <div class="my-card-img">
+            lorem img
         </div>
-        <div class="project-info">
-            <div class="flex-pr">
-                <div class="project-title text-nowrap">{{ project.title }}</div>
-                <div class="project-hover">
-                    <router-link :to="{ name: 'single-project', params: { id: project.id } }">
-                        <svg style="color: black;" xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" color="black"
-                            stroke-linejoin="round" stroke-linecap="round" viewBox="0 0 24 24" stroke-width="2" fill="none"
-                            stroke="currentColor">
-                            <line y2="12" x2="19" y1="12" x1="5"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
-                        </svg>
-                    </router-link>
-                </div>
-            </div>
-            <div class="types">
-                <span style="background-color: rgba(165, 96, 247, 0.43); color: rgb(85, 27, 177);" class="project-type"
-                    v-for="tech in project.technologies" :key="project.technologies.id">• {{ tech.name }}</span>
-            </div>
+        <div class="my-card-text">
+            {{ project.title }}
+            <router-link :to="{ name: 'single-project', params: { id: project.id } }">
+                <button class="btn my-btn">Dettagli</button>
+            </router-link>
         </div>
-    </article>
+    </div>
 </template>
 <style lang="scss" scoped>
 @use '../style/general.scss' as *;
+
+/*LAYOUT*/
+.my-card {
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .my-card-img {
+        width: 100%;
+        height: 50%;
+        border-radius: 5px 5px 0 0;
+        background-color: orange;
+    }
+
+    .my-card-text {
+        height: 50%;
+        width: 100%;
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .my-btn {
+        background-color: #050401;
+        margin-top: 5px;
+        color: white;
+    }
+
+    .my-btn:hover {
+        color: gold;
+    }
+}
 </style>
